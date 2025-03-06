@@ -16,7 +16,8 @@ Este proyecto implementa una automatización en Python para calcular las comisio
 
 ---
 
-## 📋 **Requisitos**
+## **Requisitos**
+
 
 Para ejecutar este proyecto, necesitas tener instalado lo siguiente:
 
@@ -25,7 +26,7 @@ Para ejecutar este proyecto, necesitas tener instalado lo siguiente:
 
 ---
 
-## 🛠️ **Instalación de Dependencias**
+## **Instalación de Dependencias**
 
 Puedes instalar las dependencias necesarias de dos maneras:
 
@@ -33,3 +34,24 @@ Puedes instalar las dependencias necesarias de dos maneras:
 Ejecuta el siguiente comando para instalar las dependencias automáticamente:
 ```bash
 python setup.py
+
+### Opción 2:  `requirements.txt`
+
+```bash
+pip install -r requirements.txt
+```
+
+## Ejecución del script
+
+Para ejecutar el cálculo de comisiones:
+
+```bash
+python main.py
+```
+
+## Lógica del cálculo
+
+1. **Carga de datos:** Se extraen los registros de la base de datos SQLite.
+2. **Limpieza de datos:** Se filtran empresas para que solo esten las activas y se filtran las fechas dentro del rango solicitado (julio y agosto 2024).
+3. **Cálculo de comisiones:** Se aplica la lógica de cobro basada en el contrato de cada empresa aplicando los descuentos necesarios y aplicando el iva del 19%.
+4. **Exportación de resultados:** Los datos se guardan en un archivo Excel dentro de la carpeta `resultado/`.
